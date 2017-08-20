@@ -4,7 +4,7 @@
 
 clear
 
-echo "Soleil build started..."
+echo "Panda farm build started..."
 
 echo "  Getting ready..."
 rm -rf bin/
@@ -48,7 +48,7 @@ rm tsconfig.json
 mv tsconfig.json.bak tsconfig.json
 
 echo "  Bundling scripts..."
-browserify bin/js/soleil.js -o bin/js/soleil.bundled.js
+browserify bin/js/pandafarm.js -o bin/js/pandafarm.bundled.js
 #for f in $(find bin/js/ -name '*.js'); do echo "    $f"; browserify $f -o ${f%.*}.bundled.js; done
 
 
@@ -63,6 +63,6 @@ fi
 echo "-----------------------------------------------------------------------------------"
 echo "Build complete - copying to local webserver directory."
 echo "-----------------------------------------------------------------------------------"
-rm -rf ~/localhost/soleil
-mkdir ~/localhost/soleil
-cp -r bin/. ~/localhost/soleil
+rm -rf ~/localhost/pandafarm
+mkdir ~/localhost/pandafarm
+cp -r bin/. ~/localhost/pandafarm

@@ -22,24 +22,7 @@ export class Biome {
      * @returns {EAlignment}
      */
     static getRandomAlignment() : EBiome {
-        switch (Math.floor(Math.random() * 3)) {
-            case 0:
-                return EBiome.DESERT;
-            case 1:
-                return EBiome.FOREST;
-            case 2:
-                return EBiome.PLAINS;
-            case 3:
-                return EBiome.HILLS;
-            case 4:
-                return EBiome.ROCKS;
-            case 5:
-                return EBiome.SWAMP;
-            case 6:
-                return EBiome.WATER;
-            default:
-                return EBiome.PLAINS;
-        }
+        return Dice.roll(7);
     }
 
     /**
@@ -48,15 +31,6 @@ export class Biome {
     static getRandomAlignmentWeighted() : EBiome {
         let weights = [100, 10, 40];
 
-        switch(Dice.getWeightedRoll(weights)) {
-            case 0:
-
-            case 1:
-
-            case 2:
-
-            default:
-
-        }
+        return Dice.rollWeighted(weights);
     }
 }

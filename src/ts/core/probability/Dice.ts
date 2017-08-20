@@ -10,7 +10,7 @@ export class Dice {
      * @param max  A value up to this will be chosen.
      * @returns    An unweighted dice roll in [0,max).
      */
-    static getRoll(max : number) {
+    static roll(max : number) : number {
         return Math.floor(Math.random() * max);
     }
 
